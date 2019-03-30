@@ -10,6 +10,11 @@
 				</div>
 
 				<div class="form-group">
+					<label for="exampleInputEmail1">Judul Laporan KP</label>
+					<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Judul Laporan KP">
+				</div>
+
+				<div class="form-group">
 					<label for="exampleInputEmail1">Dosen Pembimbing 1</label>
 					<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Dosen Pembimbing 1">
 				</div>
@@ -26,11 +31,30 @@
 						<option>Washington</option>
 					</select>
 				</div>
+
 				<div class="form-group">
-					<label for="exampleInputFile">File Proposal</label>
+					<label for="exampleInputEmail1">Dosen Pembimbing 3 ( Opsional )</label>
+					<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Dosen Pembimbing 3">
+				</div>
+
+				<div class="form-group">
+					<label for="exampleInputFile">File Proposal TA</label>
 					<input type="file" id="exampleInputFile">
 					<p class="help-block">File Max 10 Mb</p>
 				</div>
+
+				<div class="form-group">
+					<label for="exampleInputFile">Transkrip Nilai</label>
+					<input type="file" id="exampleInputFile">
+					<p class="help-block">File Max 10 Mb</p>
+				</div>
+
+				<div class="form-group">
+					<label for="exampleInputFile">CV</label>
+					<input type="file" id="exampleInputFile">
+					<p class="help-block">File Max 10 Mb</p>
+				</div>
+
 				</div>
 				<div class="box-footer">
 					<button type="submit" class="btn btn-primary">Submit</button>

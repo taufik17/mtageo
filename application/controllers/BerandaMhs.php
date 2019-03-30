@@ -25,4 +25,12 @@ class BerandaMhs extends CI_Controller {
 		$isi['sub_judul'] = '';
 		$this->load->view('Mahasiswa/tampilan_beranda',$isi);
 	}
+
+	public function ProfilMhs()
+	{
+		$isi['konten'] = 'Mahasiswa/konten_profilMhs';
+		$isi['judul'] = 'Profil';
+		$isi['sub_judul'] = 'tes';
+		$this->load->view('Mahasiswa/tampilan_beranda',$isi);
+	}
 }

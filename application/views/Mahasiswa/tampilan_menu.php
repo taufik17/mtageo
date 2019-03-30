@@ -23,7 +23,7 @@
     <ul class="sidebar-menu" data-widget="tree">
       <li>
         <a href="<?php echo base_url() ?>DaftarTA">
-          <i class="fa fa-book"></i> <span>Pendaftaran TA</span>
+          <i class="fa fa-book"></i> <span>Pendaftaran TA1</span>
         </a>
       </li>
     </ul>
@@ -45,6 +45,14 @@
       <li class="treeview">
         <a href="#">
           <i class="fa fa-graduation-cap"></i> <span>Pendaftaran Sidang</span>
+        </a>
+      </li>
+    </ul>
+
+    <ul class="sidebar-menu" data-widget="tree">
+      <li class="treeview">
+        <a href="#">
+          <i class="fa fa-university"></i> <span>Yudisium</span>
         </a>
       </li>
     </ul>

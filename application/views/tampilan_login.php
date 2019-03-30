@@ -40,13 +40,24 @@
    <p>&nbsp</p>
     <form method="POST" action="<?php echo base_url();?>login/getlogin" onsubmit="return cekform();">
       <div class="form-group has-feedback">
-        <input type="Email" name="Email" id="Email" class="form-control" placeholder="Email">
+        <input type="Email" name="Email" id="Email" class="form-control" placeholder="Email" required>
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
       </div>
 
       <div class="form-group has-feedback">
-        <input type="password" name="password" id="password" class="form-control" placeholder="Sandi">
+        <input type="password" name="password" id="password" class="form-control" placeholder="Sandi" required>
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-5">
+          <p><?php echo $image ?></p>
+        </div>
+      </div>
+
+      <div class="form-group has-feedback">
+        <input type="text" name="captcha_code" id="captcha_code" class="form-control" placeholder="Ketikkan kode diatas" required>
+        <span class="glyphicon glyphicon-barcode form-control-feedback"></span>
       </div>
 
       <div class="row">
