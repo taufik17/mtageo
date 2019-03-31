@@ -13,7 +13,7 @@
     </div>
     <!-- ini menu side bar -->
     <ul class="sidebar-menu" data-widget="tree">
-      <li class="active">
+      <li >
         <a href="<?php base_url() ?>BerandaMhs">
           <i class="fa fa-home"></i> <span>Beranda</span>
         </a>
@@ -28,22 +28,22 @@
       </li>
     </ul>
     <ul class="sidebar-menu" data-widget="tree">
-      <li class="treeview">
-        <a href="#">
+      <li >
+        <a href="<?php echo base_url() ?>Daftar_Seminar_TA1">
           <i class="fa fa-book"></i> <span>Pendaftaran Seminar TA1</span>
         </a>
       </li>
     </ul>
     <ul class="sidebar-menu" data-widget="tree">
-      <li class="treeview">
-        <a href="#">
+      <li>
+        <a href="<?php echo base_url() ?>Daftar_Seminar_Hasil">
           <i class="fa fa-bullhorn"></i> <span>Pendaftaran Seminar Hasil</span>
         </a>
       </li>
     </ul>
     <ul class="sidebar-menu" data-widget="tree">
-      <li class="treeview">
-        <a href="#">
+      <li class="active">
+        <a href="<?php echo base_url() ?>Daftar_Sidang">
           <i class="fa fa-graduation-cap"></i> <span>Pendaftaran Sidang</span>
         </a>
       </li>

@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="<?php base_url() ?>assets/dist/css/AdminLTE.min.css">
   <link rel="stylesheet" href="<?php base_url() ?>assets/dist/css/skins/_all-skins.min.css">
   <link rel="stylesheet" href="<?php base_url() ?>assets/font/sanspro.css">
+  <link rel="stylesheet" href="<?php base_url() ?>assets/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
 </head>
 <!-- ADD THE CLASS layout-boxed TO GET A BOXED LAYOUT -->
 <style type="text/css">
@@ -142,5 +143,12 @@
 <script src="<?php base_url() ?>assets/dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="<?php base_url() ?>assets/dist/js/demo.js"></script>
+<!-- bootstrap datepicker -->
+<script src="<?php base_url() ?>assets/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+<script>
+$('#datepicker').datepicker({
+  autoclose: true
+})
+</script>
 </body>
 </html>
