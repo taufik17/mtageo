@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>MtaGeo | Masuk</title>
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-  <link href="http://sso.itera.ac.id/assets/css/loginstyle.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="<?php base_url() ?>assets/loginstyle.css">
   <link rel="stylesheet" href="<?php base_url() ?>assets/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="<?php base_url() ?>assets/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="<?php base_url() ?>assets/plugins/iCheck/square/blue.css">
@@ -20,6 +20,9 @@
              		background-blend-mode: darken;
              		transition: 3s;
              	}
+              blockquote {
+               background-color: rgba(0, 0, 0, 0.57);
+              }
              	html {
              	    position: relative;
              	    min-height: 100%;
@@ -67,42 +70,42 @@
              	    }
              	}
              	.item:nth-child(1) {
-             	    background: url(http://sso.itera.ac.id/assets/img/bg-login11.JPG) no-repeat center center fixed;
+             	    background: url(<?php base_url() ?>assets/bglogin/1.JPG) no-repeat center center fixed;
              	    -webkit-background-size: cover;
              	    -moz-background-size: cover;
              	    -o-background-size: cover;
              	    background-size: cover;
              	}
              	.item:nth-child(2) {
-             	    background: url(http://sso.itera.ac.id/assets/img/bg-login4.jpg) no-repeat center center fixed;
+             	    background: url(<?php base_url() ?>assets/bglogin/2.jpg) no-repeat center center fixed;
              	    -webkit-background-size: cover;
              	    -moz-background-size: cover;
              	    -o-background-size: cover;
              	    background-size: cover;
              	}
              	.item:nth-child(3) {
-             	    background: url(http://sso.itera.ac.id/assets/img/bg-login6.jpg) no-repeat center center fixed;
+             	    background: url(<?php base_url() ?>assets/bglogin/3.jpg) no-repeat center center fixed;
              	    -webkit-background-size: cover;
              	    -moz-background-size: cover;
              	    -o-background-size: cover;
              	    background-size: cover;
              	}
              	.item:nth-child(4) {
-             	    background: url(http://sso.itera.ac.id/assets/img/bg-login7.jpg) no-repeat center center fixed;
+             	    background: url(<?php base_url() ?>assets/bglogin/4.jpg) no-repeat center center fixed;
              	    -webkit-background-size: cover;
              	    -moz-background-size: cover;
              	    -o-background-size: cover;
              	    background-size: cover;
              	}
              	.item:nth-child(5) {
-             	    background: url(http://sso.itera.ac.id/assets/img/bg-login9.jpg) no-repeat center center fixed;
+             	    background: url(<?php base_url() ?>assets/bglogin/5.jpg) no-repeat center center fixed;
              	    -webkit-background-size: cover;
              	    -moz-background-size: cover;
              	    -o-background-size: cover;
              	    background-size: cover;
              	}
              	.item:nth-child(6) {
-             	    background: url(http://sso.itera.ac.id/assets/img/bg-login5.jpg) no-repeat center center fixed;
+             	    background: url(<?php base_url() ?>assets/bglogin/6.jpg) no-repeat center center fixed;
              	    -webkit-background-size: cover;
              	    -moz-background-size: cover;
              	    -o-background-size: cover;
@@ -214,10 +217,12 @@
 						        </div>
 						        <!-- /.col -->
 						        <div class="col-xs-4">
-						          <button type="submit" class="btn btn-primary btn-block btn-flat">
-						           <i class="fa fa-sign-in"></i>&nbsp
+               <div class="text-right">
+						          <button type="submit" class="btn btn-primary">
+						           <i class="fa fa-sign-in"></i>
 						           Masuk
 						          </button>
+               </div>
 						        </div>
 						        <!-- /.col -->
 						      </div>
