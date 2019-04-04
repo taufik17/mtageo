@@ -21,7 +21,7 @@
     </ul>
 
     <ul class="sidebar-menu" data-widget="tree">
-      <li>
+      <li class="active">
         <a href="<?php echo base_url() ?>DaftarTA">
           <i class="fa fa-book"></i> <span>Pendaftaran TA1</span>
         </a>
@@ -42,7 +42,7 @@
       </li>
     </ul>
     <ul class="sidebar-menu" data-widget="tree">
-      <li class="active">
+      <li>
         <a href="<?php echo base_url() ?>Daftar_Sidang">
           <i class="fa fa-graduation-cap"></i> <span>Pendaftaran Sidang</span>
         </a>

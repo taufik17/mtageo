@@ -8,6 +8,8 @@ class BerandaMhs extends CI_Controller {
 		$isi['judul'] = 'Beranda';
 		$isi['Welcome'] = 'Beranda';
 		$isi['sub_judul'] = '';
+		$isi['title'] = "SITA | Dashboard Mahasiswa";
+		$isi['menu'] = "Mahasiswa/menu/menu_beranda";
 		$this->load->view('Mahasiswa/tampilan_beranda',$isi);
 	}
 

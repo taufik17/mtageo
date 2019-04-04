@@ -8,6 +8,8 @@ class Daftar_Sidang extends CI_Controller {
 		$isi['judul'] = 'Beranda';
 		$isi['Welcome'] = 'Pendaftaran Sidang';
 		$isi['sub_judul'] = 'Pendaftaran Sidang';
+		$isi['title'] = "SITA | Daftar Sidang";
+		$isi['menu'] = "Mahasiswa/menu/menu_daftar_sidang";
 		$this->load->view('Mahasiswa/tampilan_beranda',$isi);
 	}
 }

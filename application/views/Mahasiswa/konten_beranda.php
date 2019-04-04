@@ -114,11 +114,11 @@
        <div class="tab-pane active" id="tab_1">
         <div>
       			<p style="text-align: center;">
-          <iframe src="<?php base_url() ?>assets/file/SOP%20tugs%20akhir.pdf" class="gde-frame" style="width:900px; height:400px; border: none;" scrolling="no">
+          <iframe src="//docs.google.com/viewer?url=http%3A%2F%2Ftg.itera.ac.id%2Fwp-content%2Fuploads%2F2017%2F12%2FDiagram-Alir-Tugas-Akhir.pdf&amp;hl=en_US&amp;embedded=true" class="gde-frame" style="width:900px; height:400px; border: none;" scrolling="no">
           </iframe>
          </p>
          <p class="gde-text">
-          <a href="<?php base_url() ?>assets/file/SOP%20tugs%20akhir.pdf" class="gde-link">Download (PDF, 373KB)
+          <a href="http://tg.itera.ac.id/wp-content/uploads/2017/12/Diagram-Alir-Tugas-Akhir.pdf" class="gde-link">Download (PDF, 14KB)
           </a>
          </p>
         </div>

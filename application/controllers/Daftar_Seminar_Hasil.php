@@ -8,6 +8,8 @@ class Daftar_Seminar_Hasil extends CI_Controller {
 		$isi['judul'] = 'Beranda';
 		$isi['Welcome'] = 'Pendaftaran Seminar Hasil';
 		$isi['sub_judul'] = 'Pendaftaran Seminar Hasil';
+		$isi['title'] = "SITA | Daftar Seminar Hasil";
+		$isi['menu'] = "Mahasiswa/menu/menu_daftar_seminar_hasil";
 		$this->load->view('Mahasiswa/tampilan_beranda',$isi);
 	}
 }

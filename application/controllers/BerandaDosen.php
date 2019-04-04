@@ -7,6 +7,7 @@ class BerandaDosen extends CI_Controller {
 		$isi['judul'] = 'Beranda';
 		$isi['Welcome'] = 'Beranda';
 		$isi['sub_judul'] = '';
+		$isi['title'] = "SITA | Dashboard Dosen";
 		$this->load->view('Dosen/tampilan_beranda',$isi);
 	}
 

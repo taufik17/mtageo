@@ -9,6 +9,8 @@ class DaftarTA extends CI_Controller {
 		$isi['judul'] = 'Beranda';
 		$isi['Welcome'] = 'Pendaftaran TA1';
 		$isi['sub_judul'] = 'Pendaftaran TA1';
+		$isi['title'] = "SITA | Daftar TA1";
+		$isi['menu'] = "Mahasiswa/menu/menu_daftar_ta1";
 		$this->load->view('Mahasiswa/tampilan_beranda',$isi);
 	}
 }

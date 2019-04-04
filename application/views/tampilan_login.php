@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>MtaGeo | Masuk</title>
+  <title><?php echo $title ?></title>
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <link rel="stylesheet" href="<?php base_url() ?>assets/loginstyle.css">
   <link rel="stylesheet" href="<?php base_url() ?>assets/bootstrap/css/bootstrap.min.css">
@@ -134,7 +134,6 @@
 </head>
 <body>
  <div class="carousel carouselnew slide carousel-fade" id="mybgcarousel" data-ride="carousel">
-
 	    <!-- Wrapper for slides -->
 	    <div class="carousel-inner" role="listbox">
 	        <div class="item active">
@@ -151,7 +150,6 @@
 	        </div>
 	    </div>
 	    <!-- Left and right controls -->
-
 	</div>
 
  <div class="login-page">

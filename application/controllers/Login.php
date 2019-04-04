@@ -24,6 +24,7 @@ class Login extends CI_Controller {
 		$data['image'] = $cap['image'];
 		$this->session->set_userdata('mycaptcha', $cap['word']);
 		$data['word'] = $this->session->userdata('mycaptcha');
+		$data['title'] = "MtaGeo | Masuk";
 		if(empty($Email))
 		{
 			$this->load->view('tampilan_login', $data);
