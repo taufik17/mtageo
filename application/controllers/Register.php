@@ -5,4 +5,9 @@ class Register extends CI_Controller {
 	{
 		$this->load->view('Mahasiswa/tampilan_register');
 	}
+
+	public function Daftar()
+	{
+		$this->load->view('Mahasiswa/daftar');
+	}
 }
