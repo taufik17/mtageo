@@ -5,9 +5,11 @@ class ProfilMhs extends CI_Controller {
 	{
 		$this->model_keamanan->getkeamanan();
 		$isi['konten'] = 'Mahasiswa/konten_profil';
-		$isi['judul'] = 'Beranda';
-		$isi['Welcome'] = 'Profil';
-		$isi['sub_judul'] = 'Proifl';
+		$isi['judul'] = 'Proifl';
+		$isi['Welcome'] = 'Profil Mahasiswa';
+		$isi['sub_judul'] = '';
+		$isi['menu'] = "Mahasiswa/menu/menu_nonaktif";
+		$isi['title'] = "SITA | Profil Mahasiswa";
 		$this->load->view('Mahasiswa/tampilan_beranda',$isi);
 	}
 }
