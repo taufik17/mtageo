@@ -8,6 +8,7 @@ class Model_login extends CI_model {
 		$this->db->where('email',$u);
 		$this->db->where('password',$pwd);
 		$query = $this->db->get('mahasiswa');
+		$query2 = $this->db->get('dosen');
 		if($query->num_rows()>0)
 		{
 			foreach ($query->result() as $row)
@@ -16,6 +17,16 @@ class Model_login extends CI_model {
 							  'password'	=> $row->password);
 				$this->session->set_userdata($sess);
 				redirect('BerandaMhs');
+			}
+		}
+		if($query2->num_rows()>0)
+		{
+			foreach ($query2->result() as $row)
+			{
+				$sess = array('EmailDosen'	=> $row->EmailDosen,
+							  'password'	=> $row->password);
+				$this->session->set_userdata($sess);
+				redirect('BerandaDosen');
 			}
 		}
 		else

@@ -12,4 +12,14 @@ class Model_keamanan extends CI_model {
 			redirect('login');
 		}
 	}
+
+	public function getkeamanandosen()
+	{
+		$Email = $this->session->userdata('EmailDosen');
+		if(empty($EmailDosen))
+		{
+			$this->session->sess_destroy();
+			redirect('login');
+		}
+	}
 }

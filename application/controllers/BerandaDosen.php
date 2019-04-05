@@ -11,4 +11,10 @@ class BerandaDosen extends CI_Controller {
 		$this->load->view('Dosen/tampilan_beranda',$isi);
 	}
 
+	public function logout()
+	{
+		$this->session->sess_destroy();
+		redirect('login');
+	}
+
 }

@@ -4,6 +4,7 @@ class Login extends CI_Controller {
 	public function index()
 	{
 		$Email = $this->session->userdata('Email');
+		$EmailDosen = $this->session->userdata('EmailDosen');
 		$options = array(
 			'img_path'=>'./captcha/', #folder captcha yg sudah dibuat tadi
 			'img_url'=>base_url('captcha'), #ini arahnya juga ke folder captcha
@@ -25,11 +26,14 @@ class Login extends CI_Controller {
 		$this->session->set_userdata('mycaptcha', $cap['word']);
 		$data['word'] = $this->session->userdata('mycaptcha');
 		$data['title'] = "MtaGeo | Masuk";
-		if(empty($Email))
+		if(!empty($Email))
 		{
-			$this->load->view('tampilan_login', $data);
-		} else {
 			redirect('BerandaMhs');
+		}
+		if(!empty($EmailDosen)){
+			redirect('BerandaDosen');
+		} else {
+			$this->load->view('tampilan_login', $data);
 		}
 	}
 
