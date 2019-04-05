@@ -15,7 +15,7 @@ class Model_keamanan extends CI_model {
 
 	public function getkeamanandosen()
 	{
-		$Email = $this->session->userdata('EmailDosen');
+		$EmailDosen = $this->session->userdata('EmailDosen');
 		if(empty($EmailDosen))
 		{
 			$this->session->sess_destroy();
