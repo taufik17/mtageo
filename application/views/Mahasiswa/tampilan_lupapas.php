@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="<?php base_url() ?>assets/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="<?php base_url() ?>assets/dist/css/AdminLTE.min.css">
   <link rel="stylesheet" href="<?php base_url() ?>assets/plugins/iCheck/square/blue.css">
+  <link rel="icon" type="image/png" href="<?php base_url() ?>assets/gambar/favicon.png">
 
   <style type="text/css">
               #latarbelakang {
