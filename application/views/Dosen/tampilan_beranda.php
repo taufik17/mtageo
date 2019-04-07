@@ -9,8 +9,12 @@
   <link rel="stylesheet" href="<?php base_url() ?>assets/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="<?php base_url() ?>assets/Ionicons/css/ionicons.min.css">
   <link rel="stylesheet" href="<?php base_url() ?>assets/dist/css/AdminLTE.min.css">
+  <link rel="stylesheet" href="<?php base_url() ?>assets/datatables.net-bs/css/dataTables.bootstrap.min.css">
+
   <link rel="stylesheet" href="<?php base_url() ?>assets/dist/css/skins/_all-skins.min.css">
   <link rel="stylesheet" href="<?php base_url() ?>assets/font/sanspro.css">
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
 </head>
 <!-- ADD THE CLASS layout-boxed TO GET A BOXED LAYOUT -->
 <style type="text/css">
@@ -19,7 +23,7 @@
                 background-repeat: repeat;
             }
         </style>
-<body id="latarbelakang" class="latarbelakang hold-transition skin-blue layout-boxed sidebar-mini" style="height: auto; min-height: 100%;">
+<body id="latarbelakang" class="latarbelakang hold-transition skin-blue layout-boxed sidebar-mini">
 <!-- Site wrapper -->
 <div>
  &nbsp
@@ -28,22 +32,23 @@
  <div>
   &nbsp
  </div>
- <div class="container base">
-  <div class="container">
-      <div class="row ">
-        <div class="col-md-1">
-         <a href="<?php base_url() ?>">
-           <img src="<?php base_url() ?>assets/dist/img/logo-itera-oke.png" width="70px" style="margin-bottom:10px; ">
-         </a>
+ <header class="main-header">
+  <div class="container base">
+    <div class="container">
+        <div class="row ">
+          <div class="col-md-1">
+              <a href="<?php base_url() ?>">
+                <img src="<?php base_url() ?>assets/dist/img/logo-itera-oke.png" width="70px" style="margin-bottom:10px; ">
+              </a>
+          </div>
+          <div class="col-md-5">
+            <h3>Sistem Informasi Tugas Akhir</h3>
+            <h5>Teknik Geofisika</h5>
+          </div>
         </div>
-        <div class="col-md-5">
-          <h3>Sistem Informasi Tugas Akhir</h3>
-          <h5>Teknik Geofisika</h5>
-          <p><em>"Institut Teknologi Sumatera"</em></p>
-        </div>
-      </div>
+    </div>
   </div>
-</div>
+ </header>
  <div>
   &nbsp
  </div>
@@ -108,7 +113,7 @@
         <?php echo $Welcome; ?>
       </h1>
       <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-home"></i> <?php echo $judul; ?></a></li>
+        <li><a href="<?php base_url()?>BerandaDosen"><i class="fa fa-home"></i> <?php echo $judul; ?></a></li>
         <li><a href="#"><i class="fa fa-right"></i> <?php echo $sub_judul; ?></a></li>
       </ol>
 
@@ -143,5 +148,22 @@
 <script src="<?php base_url() ?>assets/dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="<?php base_url() ?>assets/dist/js/demo.js"></script>
+<!-- DataTables -->
+<script src="<?php base_url() ?>assets/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="<?php base_url() ?>assets/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<!-- page script -->
+<script>
+  $(function () {
+    $('#example1').DataTable()
+    $('#example2').DataTable({
+      'paging'      : true,
+      'lengthChange': false,
+      'searching'   : false,
+      'ordering'    : true,
+      'info'        : true,
+      'autoWidth'   : false
+    })
+  })
+</script>
 </body>
 </html>
