@@ -7,7 +7,9 @@
         <img src="<?php base_url() ?>assets/dist/img/avatar5.png" class="img-circle" alt="User Image">
       </div>
       <div class="pull-left info">
-        <p>Nama Mahasiswa</p>
+        <?php foreach ($data->result() as $nama ) {
+        ?> <p><?php echo $nama->Nama_mhs ;?></p>
+         <?php }?>
         <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
       </div>
     </div>

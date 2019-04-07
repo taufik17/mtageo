@@ -1,50 +1,21 @@
 <section class="content">
  <div class="row">
-   <div class="col-lg-3 col-xs-6">
+   <div class="col-lg-100 col-xs-6">
      <!-- small box -->
      <div class="small-box bg-aqua">
        <div class="inner">
-         <h3>150</h3>
-         <p>sesuatu</p>
+         <?php foreach ($data->result() as $nama ) {
+         ?> <h3><?php echo $nama->semester ;?></h3>
+          <?php }?>
+         <p>Tingkat Semester</p>
        </div>
        <div class="icon">
-         <i class="ion ion-bagx"></i>
+         <i class="ion ion-bookmark"></i>
        </div>
        <a href="#" class="small-box-footer">Selengkapnya <i class="fa fa-arrow-circle-right"></i></a>
      </div>
    </div>
-   <!-- ./col -->
-   <div class="col-lg-3 col-xs-6">
-     <!-- small box -->
-     <div class="small-box bg-green">
-       <div class="inner">
-         <h3>53<sup style="font-size: 20px">%</sup></h3>
-
-         <p>sesuatu</p>
-       </div>
-       <div class="icon">
-         <i class="ion ion-stats-barsx"></i>
-       </div>
-       <a href="#" class="small-box-footer">Selengkapnya <i class="fa fa-arrow-circle-right"></i></a>
-     </div>
-   </div>
-   <!-- ./col -->
-   <div class="col-lg-3 col-xs-6">
-     <!-- small box -->
-     <div class="small-box bg-yellow">
-       <div class="inner">
-         <h3>44</h3>
-
-         <p>sesuatu</p>
-       </div>
-       <div class="icon">
-         <i class="ion ion-person-addx"></i>
-       </div>
-       <a href="#" class="small-box-footer">Selengkapnya <i class="fa fa-arrow-circle-right"></i></a>
-     </div>
-   </div>
-   <!-- ./col -->
-   <div class="col-lg-3 col-xs-6">
+   <div class="col-lg-100 col-xs-6">
      <!-- small box -->
      <div class="small-box bg-red">
        <div class="inner">
@@ -70,22 +41,19 @@
       <tr>
        <td width="150px;">Nama</td>
        <td width="2px;">:</td>
-       <td>Taufik Agung Santoso</td>
+       <?php foreach ($data->result() as $nama ) {
+       ?> <td><?php echo $nama->Nama_mhs ;?></td>
       </tr>
       <tr>
        <td>NIM</td>
        <td>:</td>
-       <td>14116007</td>
+       <td><?php echo $nama->NIM ;?></td>
       </tr>
       <tr>
        <td>Program Studi</td>
        <td>:</td>
-       <td>S1 TEKNIK INFORMATIKA</td>
-      </tr>
-      <tr>
-       <td>Pembimbing Akademik</td>
-       <td>:</td>
-       <td>Rajif Agung Yunmar, S.Kom., M.Cs.</td>
+       <td><?php echo $nama->Jurusan ;?></td>
+        <?php }?>
       </tr>
       <tr>
        <td>Dosen Tugas Akhir 1</td>
@@ -94,6 +62,11 @@
       </tr>
       <tr>
        <td>Dosen Tugas Akhir 2</td>
+       <td>:</td>
+       <td>-</td>
+      </tr>
+      <tr>
+       <td>Dosen Tugas Akhir 3</td>
        <td>:</td>
        <td>-</td>
       </tr>

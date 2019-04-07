@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="<?php base_url() ?>assets/dist/css/skins/_all-skins.min.css">
   <link rel="stylesheet" href="<?php base_url() ?>assets/font/sanspro.css">
   <link rel="stylesheet" href="<?php base_url() ?>assets/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
+  <link rel="icon" type="image/png" href="<?php base_url() ?>assets/gambar/favicon.png">
 </head>
 <!-- ADD THE CLASS layout-boxed TO GET A BOXED LAYOUT -->
 <style type="text/css">
@@ -77,8 +78,10 @@
               <li class="user-header">
                 <img src="<?php base_url() ?>assets/dist/img/avatar5.png" class="img-circle" alt="User Image">
                 <p>
-                  Nama Mahasiswa - Teknik Geofisika
-                  <small>NIM Mahasiswa</small>
+                 <?php foreach ($data->result() as $nama ) {
+                 ?> <?php echo $nama->Nama_mhs ;?>
+                  <small><?php echo $nama->NIM ;?></small>
+                  <?php }?>
                 </p>
               </li>
               <!-- Menu Footer-->
