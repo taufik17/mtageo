@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>SITA | Registration</title>
+  <title>SITA | Pendaftaran</title>
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <link rel="stylesheet" href="<?php base_url() ?>assets/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="<?php base_url() ?>assets/font-awesome/css/font-awesome.min.css">
@@ -11,19 +11,30 @@
   <link rel="stylesheet" href="<?php base_url() ?>assets/dist/css/AdminLTE.min.css">
   <link rel="stylesheet" href="<?php base_url() ?>assets/plugins/iCheck/square/blue.css">
   <link rel="stylesheet" href="<?php base_url() ?>assets/font/sanspro.css">
+  <link rel="icon" type="image/png" href="<?php base_url() ?>assets/gambar/favicon.png">
+
+  <style type="text/css">
+              #latarbelakang {
+                  background-color: rgba(0, 0, 0, 0.57);
+                  padding: 20px;
+              }
+          </style>
 </head>
 <body class="hold-transition register-page">
 <div class="register-box">
-  <div class="register-logo">
-    <a href="<?php base_url() ?>Register"><b>Register</b></a>
+  <div class="register-logo" id="latarbelakang">
+    <a href="<?php base_url() ?>Register">
+     <font color="white">
+      <h2><i class="glyphicon glyphicon-user"></i>&nbsp; <b>Pendaftaran</b></h2></a>
+     </font>
   </div>
 
   <div class="register-box-body">
-    <p class="login-box-msg">Register a new membership</p>
+    <p class="login-box-msg">Gunakan Email ITERA</p>
 
-    <form action="../../index.html" method="post" onsubmit="return cekform()">
+    <form action="<?php base_url() ?>Register/simpan" method="post" onsubmit="return cekform()">
       <div class="form-group has-feedback">
-        <input type="text" name="name" id="name" class="form-control" placeholder="Full name" required="">
+        <input type="text" name="name" id="name" class="form-control" placeholder="Nama Lengkap" required="">
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
@@ -31,18 +42,18 @@
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="password" name="password" id="password" class="form-control" placeholder="Password" required="">
+        <input type="password" name="password" id="password" class="form-control" placeholder="Sandi" required="">
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="password" name="rpassword" id="rpassword" class="form-control" placeholder="Retype password" required="">
+        <input type="password" name="rpassword" id="rpassword" class="form-control" placeholder="Konfirmasi Sandi" required="">
         <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
       </div>
       <div class="row">
         <div class="col-xs-8">
           <div class="checkbox icheck">
             <label>
-              <input type="checkbox">&nbsp&nbspI agree to the <a href="#">terms</a>
+              <input type="checkbox">&nbsp&nbspSaya Menyetujui <a href="#">Persyaratan</a>
             </label>
           </div>
         </div>
@@ -50,7 +61,7 @@
         <div class="col-xs-4">
           <button type="submit" class="btn bg-green btn-block btn-flat">
            <i class="fa fa-user"></i>&nbsp
-           Register
+           Daftar
           </button>
         </div>
         <!-- /.col -->
@@ -58,11 +69,11 @@
     </form>
 
     <div class="social-auth-links text-center">
-      <p>- OR -</p>
+      <p>- Atau -</p>
       <div class="text-left">
        <a href="<?php echo base_url();?>Login" class="btn bg-yellow btn-block btn-flat">
         <i class="fa fa-chevron-left"></i> &nbsp &nbsp
-        I already have a membership
+        Sudah Mempunyai Akun
        </a>
       </div>
     </div>
