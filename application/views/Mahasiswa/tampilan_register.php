@@ -32,7 +32,7 @@
   <div class="register-box-body">
     <p class="login-box-msg">Gunakan Email ITERA</p>
 
-    <form action="../../index.html" method="post" onsubmit="return cekform()">
+    <form action="<?php base_url() ?>Register/simpan" method="post" onsubmit="return cekform()">
       <div class="form-group has-feedback">
         <input type="text" name="name" id="name" class="form-control" placeholder="Nama Lengkap" required="">
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
