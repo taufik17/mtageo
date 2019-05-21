@@ -5,12 +5,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title><?php echo $title ?></title>
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-  <link rel="stylesheet" href="<?php base_url() ?>assets/loginstyle.css">
-  <link rel="stylesheet" href="<?php base_url() ?>assets/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="<?php base_url() ?>assets/font-awesome/css/font-awesome.min.css">
-  <link rel="stylesheet" href="<?php base_url() ?>assets/plugins/iCheck/square/blue.css">
-  <link rel="stylesheet" href="<?php base_url() ?>assets/font/sanspro.css">
-  <link rel="icon" type="image/png" href="<?php base_url() ?>assets/gambar/favicon.png">
+  <link rel="stylesheet" href="<?php echo base_url() ?>assets/loginstyle.css">
+  <link rel="stylesheet" href="<?php echo base_url() ?>assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="<?php echo base_url() ?>assets/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="<?php echo base_url() ?>assets/plugins/iCheck/square/blue.css">
+  <link rel="stylesheet" href="<?php echo base_url() ?>assets/font/sanspro.css">
+  <link rel="icon" type="image/png" href="<?php echo base_url() ?>assets/gambar/favicon.png">
 
   <style type="text/css">
               #latarbelakang {
@@ -169,9 +169,8 @@
 
 						<div class="login-box">
 						  <div class="form-title" id="latarbelakang">
-						    <a href="<?php base_url() ?>login">
 						     <font color="white">
-						      <h1><i class="glyphicon glyphicon-lock"></i>&nbsp; <b>SITA</b> Login</h1></a>
+						      <h1><i class="glyphicon glyphicon-lock"></i>&nbsp; <b>SITA</b> Login</h1>
 						     </font>
 						  </div>
 						  <!-- /.login-logo -->
@@ -231,14 +230,14 @@
            <p><font color="#1a1816">- Atau -</font></p>
 						    </div>
 						    <div class="row">
-						      <div class="col-xs-8">
+						      <!-- <div class="col-xs-8">
 						       <div class="text-left">
 						        <a href="<?php echo base_url();?>Lupapas" class="btn btn-danger">
 						         <i class="fa fa-key"></i>
 						         Lupa Password
 						        </a>
 						       </div>
-						      </div>
+						      </div> -->
 						      <!-- /.col -->
 						      <div class="col-xs-4">
 						       <div class="text-right">

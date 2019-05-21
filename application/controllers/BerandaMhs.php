@@ -11,7 +11,12 @@ class BerandaMhs extends CI_Controller {
 		$isi['sub_judul'] = '';
 		$isi['title'] = "SITA | Dashboard Mahasiswa";
 		$isi['menu'] = "Mahasiswa/menu/menu_beranda";
-		$isi['data']		= $this->db->query("SELECT * FROM mahasiswa WHERE Email='$email_login'");
+		$isi['untuk_menu']		= $this->db->query("SELECT * FROM mahasiswa WHERE Email='$email_login'");
+		$isi['data']		= $this->db->query("SELECT * FROM mahasiswa
+                                                INNER JOIN tugas_akhir ON tugas_akhir.Email = mahasiswa.Email
+                                                INNER JOIN dosen ON tugas_akhir.EmailDosen = dosen.EmailDosen
+                                                WHERE mahasiswa.Email='$email_login'");
+	 $isi['cek_kondisi'] = $this->db->query("SELECT id_ta FROM tugas_akhir WHERE Email = '$email_login'")->num_rows();
 		$this->load->view('Mahasiswa/tampilan_beranda',$isi);
 	}
 
@@ -21,20 +26,4 @@ class BerandaMhs extends CI_Controller {
 		redirect('login');
 	}
 
-	public function DaftarTA()
-	{
-		$this->model_keamanan->getkeamanan();
-		$isi['konten'] = 'Mahasiswa/konten_daftarTA';
-		$isi['judul'] = 'Pendaftaran TA';
-		$isi['sub_judul'] = '';
-		$this->load->view('Mahasiswa/tampilan_beranda',$isi);
-	}
-
-	public function ProfilMhs()
-	{
-		$isi['konten'] = 'Mahasiswa/konten_profilMhs';
-		$isi['judul'] = 'Profil';
-		$isi['sub_judul'] = 'tes';
-		$this->load->view('Mahasiswa/tampilan_beranda',$isi);
-	}
 }

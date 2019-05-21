@@ -5,14 +5,17 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title><?php echo $title ?></title>
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-  <link rel="stylesheet" href="<?php base_url() ?>assets/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="<?php base_url() ?>assets/font-awesome/css/font-awesome.min.css">
-  <link rel="stylesheet" href="<?php base_url() ?>assets/Ionicons/css/ionicons.min.css">
-  <link rel="stylesheet" href="<?php base_url() ?>assets/dist/css/AdminLTE.min.css">
-  <link rel="stylesheet" href="<?php base_url() ?>assets/dist/css/skins/_all-skins.min.css">
-  <link rel="stylesheet" href="<?php base_url() ?>assets/font/sanspro.css">
-  <link rel="stylesheet" href="<?php base_url() ?>assets/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
-  <link rel="icon" type="image/png" href="<?php base_url() ?>assets/gambar/favicon.png">
+  <link rel="stylesheet" href="<?php echo base_url() ?>assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="<?php echo base_url() ?>assets/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="<?php echo base_url() ?>assets/Ionicons/css/ionicons.min.css">
+  <link rel="stylesheet" href="<?php echo base_url() ?>assets/dist/css/AdminLTE.min.css">
+  <link rel="stylesheet" href="<?php echo base_url() ?>assets/dist/css/skins/_all-skins.min.css">
+  <link rel="stylesheet" href="<?php echo base_url() ?>assets/font/sanspro.css">
+  <link rel="stylesheet" href="<?php echo base_url() ?>assets/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
+  <link rel="stylesheet" href="<?php echo base_url() ?>assets/dropify/dropify.min.css">
+  <link rel="stylesheet" href="<?php echo base_url() ?>assets/custom.css">
+  <link rel="stylesheet" href="<?php echo base_url() ?>assets/plugins/timepicker/bootstrap-timepicker.min.css">
+  <link rel="icon" type="image/png" href="<?php echo base_url() ?>assets/gambar/favicon.png">
 </head>
 <!-- ADD THE CLASS layout-boxed TO GET A BOXED LAYOUT -->
 <style type="text/css">
@@ -34,8 +37,8 @@
   <div class="container">
       <div class="row ">
         <div class="col-md-1">
-         <a href="<?php base_url() ?>">
-           <img src="<?php base_url() ?>assets/dist/img/logo-itera-oke.png" width="70px" style="margin-bottom:10px; ">
+         <a href="<?php echo base_url() ?>">
+           <img src="<?php echo base_url() ?>assets/dist/img/logo-itera-oke.png" width="70px" style="margin-bottom:10px; ">
          </a>
         </div>
         <div class="col-md-5">
@@ -53,7 +56,7 @@
 <div class="wrapper">
   <header class="main-header">
     <!-- Logo -->
-    <a href="../../index2.html" class="logo">
+    <a href="<?php echo base_url() ?>" class="logo">
       <!-- jika android / jika di kecilkan -->
       <span class="logo-mini">si<b>TA</b></span>
       <!-- logo for regular state and mobile devices -->
@@ -66,36 +69,17 @@
         <span class="sr-only">Toggle navigation</span>
       </a>
       <div class="navbar-custom-menu">
-        <ul class="nav navbar-nav">
-          <!-- User Account: style can be found in dropdown.less -->
-          <li class="dropdown user user-menu">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="<?php base_url() ?>assets/dist/img/avatar5.png" class="user-image" alt="User Image">
-              <span class="hidden-xs"><i class="fa fa-sort-down"></i></span>
-            </a>
-            <ul class="dropdown-menu">
-              <!-- User image -->
-              <li class="user-header">
-                <img src="<?php base_url() ?>assets/dist/img/avatar5.png" class="img-circle" alt="User Image">
-                <p>
-                 <?php foreach ($data->result() as $nama ) {
-                 ?> <?php echo $nama->Nama_mhs ;?>
-                  <small><?php echo $nama->NIM ;?></small>
-                  <?php }?>
-                </p>
-              </li>
-              <!-- Menu Footer-->
-              <li class="user-footer">
-                <div class="pull-left">
-                  <a href="<?php base_url() ?>ProfilMhs" class="btn btn-default btn-flat">Profile</a>
-                </div>
-                <div class="pull-right">
-                  <a href="<?php base_url() ?>BerandaMhs/logout" class="btn btn-default btn-flat">Sign out</a>
-                </div>
-              </li>
-            </ul>
-          </li>
-        </ul>
+       <ul class="nav navbar-nav">
+        <li>
+         <?php foreach ($untuk_menu->result() as $nama ) {
+         ?>
+         <a href="<?php echo base_url() ?>ProfilMhs"><i class="fa fa-user"></i>&nbsp <?php echo $nama->Nama_mhs ;?></a>
+         <?php }?>
+        </li>
+        <li>
+         <a href="<?php echo base_url() ?>BerandaMhs/logout"><i class="fa fa-sign-out"></i>&nbsp Logout</a>
+        </li>
+       </ul>
       </div>
     </nav>
   </header>
@@ -120,13 +104,119 @@
     <?php $this->load->view($konten); ?>
     <!-- /.konten -->
   </div>
+  <div class="modal fade" id="modal-default" style="display: none;">
+   <div class="modal-dialog">
+    <div class="modal-content">
+     <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+       <span aria-hidden="true">×</span></button>
+       <h4 class="modal-title">Perhatian!</h4>
+      </div>
+      <div class="modal-body">
+       <p>Pendaftaran Tugas Akhir Belum Dapat dilakukan, mohon lengkapi data terlebih dahulu
+       </p> <a href="<?php echo base_url() ?>ProfilMhs" class="btn btn-primary btn-sm">disini</a>
+      </div>
+      <div class="modal-footer">
+       <button type="button" class="btn btn-primary" data-dismiss="modal">Tutup</button>
+      </div>
+     </div>
+     <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+   </div>
+
+   <div class="modal fade" id="modal-sm-ta1" style="display: none;">
+    <div class="modal-dialog">
+     <div class="modal-content">
+      <div class="modal-header">
+       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">×</span></button>
+        <h4 class="modal-title">Perhatian!</h4>
+       </div>
+       <div class="modal-body">
+        <p>Pendaftaran Seminar TA 1 Belum Dapat dilakukan, silahkan selesaikan pendaftaran TA terlebih dahulu
+        </p>
+       </div>
+       <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Tutup</button>
+       </div>
+      </div>
+      <!-- /.modal-content -->
+     </div>
+     <!-- /.modal-dialog -->
+    </div>
+
+    <div class="modal fade" id="modal-sm-hasil" style="display: none;">
+     <div class="modal-dialog">
+      <div class="modal-content">
+       <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+         <span aria-hidden="true">×</span></button>
+         <h4 class="modal-title">Perhatian!</h4>
+        </div>
+        <div class="modal-body">
+         <p>Pendaftaran Seminar hasil Belum Dapat dilakukan, silahkan selesaikan pendaftaran Seminar TA1 terlebih dahulu
+         </p>
+        </div>
+        <div class="modal-footer">
+         <button type="button" class="btn btn-primary" data-dismiss="modal">Tutup</button>
+        </div>
+       </div>
+       <!-- /.modal-content -->
+      </div>
+      <!-- /.modal-dialog -->
+     </div>
+
+     <div class="modal fade" id="modal-sidang" style="display: none;">
+      <div class="modal-dialog">
+       <div class="modal-content">
+        <div class="modal-header">
+         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span></button>
+          <h4 class="modal-title">Perhatian!</h4>
+         </div>
+         <div class="modal-body">
+          <p>Pendaftaran Sidang Belum Dapat dilakukan, silahkan selesaikan pendaftaran Seminar hasil terlebih dahulu
+          </p>
+         </div>
+         <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Tutup</button>
+         </div>
+        </div>
+        <!-- /.modal-content -->
+       </div>
+       <!-- /.modal-dialog -->
+      </div>
+
+      <div class="modal fade" id="modal-yudisium" style="display: none;">
+       <div class="modal-dialog">
+        <div class="modal-content">
+         <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+           <span aria-hidden="true">×</span></button>
+           <h4 class="modal-title">Perhatian!</h4>
+          </div>
+          <div class="modal-body">
+           <p>Yudisium Belum Dapat dilakukan, silahkan selesaikan pendaftaran sidang terlebih dahulu
+           </p>
+          </div>
+          <div class="modal-footer">
+           <button type="button" class="btn btn-primary" data-dismiss="modal">Tutup</button>
+          </div>
+         </div>
+         <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+       </div>
+
+
   <!-- /.content-wrapper -->
   <div class="control-sidebar-bg"></div>
   <footer class="main-footer">
     <div class="pull-right hidden-xs">
       <b>Version</b> Beta
     </div>
-    <strong>Copyright &copy; 2019 <a href="<?php base_url() ?>">Tim Hore</a>.</strong> All rights
+    <strong>Copyright &copy; 2019 <a href="<?php echo base_url() ?>">Informatika</a>.</strong> All rights
     reserved.
   </footer>
 </div>
@@ -135,22 +225,45 @@
 </div>
 
 <!-- jQuery 3 -->
-<script src="<?php base_url() ?>assets/jquery/dist/jquery.min.js"></script>
+<script src="<?php echo base_url() ?>assets/jquery/dist/jquery.min.js"></script>
 <!-- Bootstrap 3.3.7 -->
-<script src="<?php base_url() ?>assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="<?php echo base_url() ?>assets/bootstrap/js/bootstrap.min.js"></script>
 <!-- SlimScroll -->
-<script src="<?php base_url() ?>assets/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+<script src="<?php echo base_url() ?>assets/jquery-slimscroll/jquery.slimscroll.min.js"></script>
 <!-- FastClick -->
-<script src="<?php base_url() ?>assets/fastclick/lib/fastclick.js"></script>
+<script src="<?php echo base_url() ?>assets/fastclick/lib/fastclick.js"></script>
 <!-- AdminLTE App -->
-<script src="<?php base_url() ?>assets/dist/js/adminlte.min.js"></script>
+<script src="<?php echo base_url() ?>assets/dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
-<script src="<?php base_url() ?>assets/dist/js/demo.js"></script>
+<script src="<?php echo base_url() ?>assets/dist/js/demo.js"></script>
+<!-- bootstrap time picker -->
+<script src="<?php echo base_url() ?>assets/plugins/timepicker/bootstrap-timepicker.min.js"></script>
 <!-- bootstrap datepicker -->
-<script src="<?php base_url() ?>assets/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+<script src="<?php echo base_url() ?>assets/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+<script src="<?php echo base_url() ?>assets/dropify/dropify.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('.dropify').dropify({
+			messages: {
+                default: 'Drag atau drop untuk memilih file',
+                replace: 'Ganti',
+                remove:  'Hapus',
+                error:   'error'
+            }
+		});
+	});
+
+</script>
 <script>
 $('#datepicker').datepicker({
-  autoclose: true
+ format: "yyyy-mm-dd",
+ autoclose: true
+})
+</script>
+<script>
+//Timepicker
+$('.timepicker').timepicker({
+  showInputs: false
 })
 </script>
 </body>

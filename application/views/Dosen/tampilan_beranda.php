@@ -3,14 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>SITA | Dosen</title>
+  <title><?php echo $title; ?></title>
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-  <link rel="stylesheet" href="<?php base_url() ?>assets/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="<?php base_url() ?>assets/font-awesome/css/font-awesome.min.css">
-  <link rel="stylesheet" href="<?php base_url() ?>assets/Ionicons/css/ionicons.min.css">
-  <link rel="stylesheet" href="<?php base_url() ?>assets/dist/css/AdminLTE.min.css">
-  <link rel="stylesheet" href="<?php base_url() ?>assets/dist/css/skins/_all-skins.min.css">
-  <link rel="stylesheet" href="<?php base_url() ?>assets/font/sanspro.css">
+  <link rel="stylesheet" href="<?php echo base_url() ?>assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="<?php echo base_url() ?>assets/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="<?php echo base_url() ?>assets/Ionicons/css/ionicons.min.css">
+  <link rel="stylesheet" href="<?php echo base_url() ?>assets/dist/css/AdminLTE.min.css">
+  <link rel="stylesheet" href="<?php echo base_url() ?>assets/dist/css/skins/_all-skins.min.css">
+  <link rel="stylesheet" href="<?php echo base_url() ?>assets/font/sanspro.css">
+  <link rel="stylesheet" href="<?php echo base_url() ?>assets/dropify/dropify.min.css">
+  <link rel="stylesheet" href="<?php echo base_url() ?>assets/datatables.net-bs/css/dataTables.bootstrap.min.css">
+  <link rel="icon" type="image/png" href="<?php echo base_url() ?>assets/gambar/favicon.png">
 </head>
 <!-- ADD THE CLASS layout-boxed TO GET A BOXED LAYOUT -->
 <style type="text/css">
@@ -32,8 +35,8 @@
   <div class="container">
       <div class="row ">
         <div class="col-md-1">
-         <a href="<?php base_url() ?>">
-           <img src="<?php base_url() ?>assets/dist/img/logo-itera-oke.png" width="70px" style="margin-bottom:10px; ">
+         <a href="<?php echo base_url() ?>">
+           <img src="<?php echo base_url() ?>assets/dist/img/logo-itera-oke.png" width="70px" style="margin-bottom:10px; ">
          </a>
         </div>
         <div class="col-md-5">
@@ -51,7 +54,7 @@
 <div class="wrapper">
   <header class="main-header">
     <!-- Logo -->
-    <a href="../../index2.html" class="logo">
+    <a href="<?php echo base_url() ?>" class="logo">
       <!-- jika android / jika di kecilkan -->
       <span class="logo-mini">si<b>TA</b></span>
       <!-- logo for regular state and mobile devices -->
@@ -64,41 +67,23 @@
         <span class="sr-only">Toggle navigation</span>
       </a>
       <div class="navbar-custom-menu">
-        <ul class="nav navbar-nav">
-          <!-- User Account: style can be found in dropdown.less -->
-          <li class="dropdown user user-menu">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="<?php base_url() ?>assets/dist/img/avatar5.png" class="user-image" alt="User Image">
-              <span class="hidden-xs"><i class="fa fa-sort-down"></i></span>
-            </a>
-            <ul class="dropdown-menu">
-              <!-- User image -->
-              <li class="user-header">
-                <img src="<?php base_url() ?>assets/dist/img/avatar5.png" class="img-circle" alt="User Image">
-                <p>
-                  Nama Dosen - Teknik Geofisika
-                  <small>NIP Dosen</small>
-                </p>
-              </li>
-              <!-- Menu Footer-->
-              <li class="user-footer">
-                <div class="pull-left">
-                  <a href="#" class="btn btn-default btn-flat">Profile</a>
-                </div>
-                <div class="pull-right">
-                  <a href="#" class="btn btn-default btn-flat">Sign out</a>
-                </div>
-              </li>
-            </ul>
-          </li>
-        </ul>
+       <ul class="nav navbar-nav">
+        <li>
+         <?php foreach ($data->result() as $nama ) {
+         ?>
+         <a href="<?php echo base_url() ?>ProfilDosen"><i class="fa fa-user"></i>&nbsp <?php echo $nama->Nama ;?></a>
+         <?php }?>
+        </li>
+        <li>
+         <a href="<?php echo base_url() ?>BerandaDosen/logout"><i class="fa fa-sign-out"></i>&nbsp Logout</a>
+        </li>
+       </ul>
       </div>
     </nav>
   </header>
-
   <!-- =============================================== -->
   <!-- Menu -->
-  <?php $this->load->view('Dosen/tampilan_menu'); ?>
+  <?php $this->load->view($menu); ?>
   <!-- =============================================== -->
   <!-- / Menu -->
   <div class="content-wrapper">
@@ -108,7 +93,7 @@
         <?php echo $Welcome; ?>
       </h1>
       <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-home"></i> <?php echo $judul; ?></a></li>
+        <li><a href="<?php echo base_url()?>BerandaDosen"><i class="fa fa-home"></i> <?php echo $judul; ?></a></li>
         <li><a href="#"><i class="fa fa-right"></i> <?php echo $sub_judul; ?></a></li>
       </ol>
 
@@ -123,7 +108,7 @@
     <div class="pull-right hidden-xs">
       <b>Version</b> Beta
     </div>
-    <strong>Copyright &copy; 2019 <a href="<?php base_url() ?>">Tim Hore</a>.</strong> All rights
+    <strong>Copyright &copy; 2019 <a href="<?php echo base_url() ?>">Informatika</a>.</strong> All rights
     reserved.
   </footer>
 </div>
@@ -143,5 +128,90 @@
 <script src="<?php base_url() ?>assets/dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="<?php base_url() ?>assets/dist/js/demo.js"></script>
+<!-- DataTables -->
+<script src="<?php base_url() ?>assets/dropify/dropify.min.js"></script>
+<script src="<?php base_url() ?>assets/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="<?php base_url() ?>assets/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<!-- page script -->
+<script>
+  $(function () {
+    $('#example1').DataTable()
+    $('#example2').DataTable({
+      'paging'      : true,
+      'lengthChange': false,
+      'searching'   : false,
+      'ordering'    : true,
+      'info'        : true,
+      'autoWidth'   : false
+    })
+  })
+</script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('.dropify').dropify({
+			messages: {
+                default: 'Drag atau drop untuk memilih file',
+                replace: 'Ganti',
+                remove:  'Hapus',
+                error:   'error'
+            }
+		});
+	});
+</script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		tampil_data_permohonan();	//pemanggilan fungsi tampil barang.
+		$('#mydata').dataTable();
+		//fungsi tampil barang
+		function tampil_data_permohonan(){
+		    $.ajax({
+		        type  : 'ajax',
+		        url   : '<?php echo base_url()?>Permohonan_bimbingan/data_permohonan',
+		        async : false,
+		        dataType : 'json',
+		        success : function(data){
+		            var html = '';
+		            var i;
+		            for(i=0; i<data.length; i++){
+		                html += '<tr>'+
+		                        '<td>'+data[i].NIM+'</td>'+
+		                        '<td>'+data[i].Nama_mhs+'</td>'+
+                          '<td>'+data[i].judul_ta+'</td>'+
+                          '<td>'+
+                          '<span class="label label-success">Diterima</span>'+
+                          '</td>'+
+                          '<td>'+
+                             '<a href="javascript:;" class="btn btn-primary btn-xs item_lihat" data="'+data[i].Email+'"><i class="fa fa-eye">&nbsp</i>Lihat</a>'+' '+
+                          '</td>'+
+		                        '</tr>';
+		            }
+		            $('#show_data').html(html);
+		        }
+		    });
+		}
+
+  //GET UPDATE
+		$('#show_data').on('click','.item_lihat',function(){
+            var id=$(this).attr('data');
+            $.ajax({
+                type : "GET",
+                url  : "<?php echo base_url('Permohonan_bimbingan/get_data')?>",
+                dataType : "JSON",
+                data : {id:id},
+                success: function(data){
+                	$.each(data,function(barang_kode, barang_nama, barang_harga){
+                    	$('#ModalaEdit').modal('show');
+            			$('[name="kobar_edit"]').val(data.barang_kode);
+            			$('[name="nabar_edit"]').val(data.barang_nama);
+            			$('[name="harga_edit"]').val(data.barang_harga);
+            		});
+                }
+            });
+            return false;
+        });
+
+	});
+
+</script>
 </body>
 </html>

@@ -24,9 +24,8 @@
 <body class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo" id="latarbelakang">
-    <a href="<?php base_url() ?>Beranda">
      <font color="white">
-      <h2><i class="glyphicon glyphicon-lock"></i>&nbsp; <b>Lupa</b> Sandi</h2></a>
+      <h2><i class="glyphicon glyphicon-lock"></i>&nbsp; <b>Lupa</b> Sandi</h2>
      </font>
   </div>
   <!-- /.login-logo -->

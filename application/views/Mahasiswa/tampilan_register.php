@@ -23,16 +23,21 @@
 <body class="hold-transition register-page">
 <div class="register-box">
   <div class="register-logo" id="latarbelakang">
-    <a href="<?php base_url() ?>Register">
      <font color="white">
-      <h2><i class="glyphicon glyphicon-user"></i>&nbsp; <b>Pendaftaran</b></h2></a>
+      <h2><i class="glyphicon glyphicon-user"></i>&nbsp; <b>Pendaftaran</b></h2>
      </font>
   </div>
 
   <div class="register-box-body">
     <p class="login-box-msg">Gunakan Email ITERA</p>
-
-    <form action="../../index.html" method="post" onsubmit="return cekform()">
+    <?php
+    $info = $this->session->flashdata('info');
+    if(!empty($info))
+    {
+     echo $info;
+    }
+    ?>
+    <form action="<?php base_url() ?>Register/simpan" method="post" onsubmit="return cekform()">
       <div class="form-group has-feedback">
         <input type="text" name="name" id="name" class="form-control" placeholder="Nama Lengkap" required="">
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
@@ -100,27 +105,34 @@
 <script type="text/javascript">
  function cekform()
  {
+
+  var str = $("#email");
+  var n = str.includes("@student.itera.ac.id");
+  if (n == FALSE)
+  {
+   alert('bukan email itera');
+   $("#email").focus();
+   return false;
+  }
+
   if (!$("#name").val())
   {
    alert('Maaf full name tidak boleh kosong');
    $("#name").focus();
    return false;
   }
-
   if (!$("#email").val())
   {
    alert('Maaf email tidak boleh kosong');
    $("#email").focus();
    return false;
   }
-
   if (!$("#password").val())
   {
    alert('Maaf password tidak boleh kosong');
    $("#password").focus();
    return false;
   }
-
   if (!$("#rpassword").val())
   {
    alert('Maaf pengulangan password tidak boleh kosong');
