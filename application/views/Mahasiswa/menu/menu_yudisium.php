@@ -28,7 +28,7 @@
        <?php foreach ($untuk_menu->result() as $stat ) {
        ?>
        <?php
-       if ($stat->status_ta == 0) {
+       if ($stat->st_profil == 0) {
         ?>
         <a href="#modal-default" data-toggle="modal" data-target="#modal-default">
           <i class="fa fa-book"></i> <span>Pendaftaran TA1</span>

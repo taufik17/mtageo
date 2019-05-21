@@ -47,11 +47,11 @@
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="password" name="password" id="password" class="form-control" placeholder="Sandi" required="">
+        <input type="password" name="password" id="password" class="form-control" placeholder="Sandi" minlength="8" required="">
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="password" name="rpassword" id="rpassword" class="form-control" placeholder="Konfirmasi Sandi" required="">
+        <input type="password" name="rpassword" id="rpassword" class="form-control" placeholder="Konfirmasi Sandi" minlength="8" required="">
         <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
       </div>
       <div class="row">

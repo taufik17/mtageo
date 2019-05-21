@@ -3,7 +3,7 @@
   <?php foreach ($untuk_menu->result() as $stat ) {
   ?>
   <?php
-  if ($stat->status_ta == 0) {
+  if ($stat->st_profil == 0) {
    ?>
    <div class="col-lg-100 col-xs-12">
     <div class="alert alert-warning alert-dismissible">

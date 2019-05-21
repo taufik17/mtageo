@@ -3,9 +3,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class M_upload extends CI_model {
 
-	function simpan_upload($NIM,$Nama_mhs,$JK,$telp,$Alamat,$semester,$gambar,$ubahstatus){
+	function simpan_upload($NIM,$Nama_mhs,$JK,$telp,$Alamat,$semester,$gambar,$statusdaftar){
 		$email_login = $this->session->userdata('Email');
-		$hasil=$this->db->query("UPDATE mahasiswa SET NIM ='$NIM', semester='$semester', Nama_mhs='$Nama_mhs', foto='$gambar', JK='$JK', telp='$telp', alamat='$Alamat', status_ta='$ubahstatus' WHERE Email='$email_login' ");
+		$hasil=$this->db->query("UPDATE mahasiswa SET NIM ='$NIM', semester='$semester', Nama_mhs='$Nama_mhs', foto='$gambar', JK='$JK', telp='$telp', alamat='$Alamat', st_profil='$statusdaftar' WHERE Email='$email_login' ");
 		return $hasil;
 	}
 

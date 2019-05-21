@@ -50,8 +50,8 @@ class ProfilMhs extends CI_Controller {
 				$telp=strip_tags($this->input->post('telp'));
 				$Alamat=strip_tags($this->input->post('Alamat'));
 				$semester=strip_tags($this->input->post('semester'));
-				$ubahstatus=1;
-				$this->M_upload->simpan_upload($NIM,$Nama_mhs,$JK,$telp,$Alamat,$semester,$gambar,$ubahstatus);
+				$statusdaftar = 1;
+				$this->M_upload->simpan_upload($NIM,$Nama_mhs,$JK,$telp,$Alamat,$semester,$gambar,$statusdaftar);
 				$this->session->set_flashdata('info',
 						'<div class="alert alert-success alert-dismissible">
                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
@@ -74,8 +74,8 @@ class ProfilMhs extends CI_Controller {
 			$telp=strip_tags($this->input->post('telp'));
 			$Alamat=strip_tags($this->input->post('Alamat'));
 			$semester=strip_tags($this->input->post('semester'));
-			$ubahstatus=1;
-			$this->M_upload->simpan_upload($NIM,$Nama_mhs,$JK,$telp,$Alamat,$semester,$gambar,$ubahstatus);
+			$statusdaftar = 1;
+			$this->M_upload->simpan_upload($NIM,$Nama_mhs,$JK,$telp,$Alamat,$semester,$gambar,$statusdaftar);
 			$this->session->set_flashdata('info',
 					'<div class="alert alert-success alert-dismissible">
 															<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
