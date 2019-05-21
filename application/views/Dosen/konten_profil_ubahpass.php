@@ -63,7 +63,7 @@
 										<div class="form-group">
 												<label for="inputPassword" class="col-sm-2 control-label">Sandi Sekarang</label>
 												<div class="col-sm-10">
-														<input type="password" class="form-control" id="inputOldPassword" name="OldPassword" placeholder="Kata Sandi Saat Ini" minlength="8" required>
+														<input type="password" class="form-control" id="inputOldPassword" name="OldPassword" placeholder="Kata Sandi Saat Ini" required>
 												</div>
 										</div>
 										<div class="form-group">
